@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "The button.pm desktop app",
   "dependencies": {
-    "menubar": "*"
+    "menubar": "*",
+    "request": "*"
   },
   "devDependencies": {
     "electron-packager": "^5.1.0",

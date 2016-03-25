@@ -1,5 +1,5 @@
 var globalShortcut = require('global-shortcut')
-
+var request = require('request');
 var menubar = require('menubar')
 var mb = menubar()
 
@@ -10,9 +10,16 @@ mb.on('ready', function ready () {
 })
 
 function setGlobalShortcuts() {
-
-
+    globalShortcut.unregisterAll();
     globalShortcut.register('ctrl+alt+shift+b', function () {
+      request.post(
+        'https://maker.ifttt.com/trigger/button_pressed/with/key/mdWQxkYhM1-LuraKiqDmaXb_euu5AWqNKsPh63bTy0o',
+        function (error, response, body) {
+            if (!error && response.statusCode == 200) {
+                console.log(body)
+            }
+        }
+      );
         console.log('button is pressed')
     });
 }
