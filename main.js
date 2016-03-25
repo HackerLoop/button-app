@@ -13,7 +13,7 @@ function setGlobalShortcuts() {
     globalShortcut.unregisterAll();
     globalShortcut.register('ctrl+alt+shift+b', function () {
       request.post(
-        'https://maker.ifttt.com/trigger/button_pressed/with/key/mdWQxkYhM1-LuraKiqDmaXb_euu5AWqNKsPh63bTy0o',
+        'https://zapier.com/hooks/catch/4505/2xk24t/',
         function (error, response, body) {
             if (!error && response.statusCode == 200) {
                 console.log(body)
