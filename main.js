@@ -1,8 +1,7 @@
 'use strict';
-
+var ipc = require('ipc');
 var globalShortcut = require('global-shortcut')
 var request = require('request');
-var ipc = require('ipc');
 var menubar = require('menubar');
 
 var mb = menubar({
@@ -33,6 +32,7 @@ function setGlobalShortcuts() {
     });
 }
 
-ipc.on('close-main-window', function () {
-    app.quit();
+
+ipc.on('close-app', function(event, arg) {
+  mb.app.quit();
 });
