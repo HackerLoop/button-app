@@ -1,8 +1,8 @@
 
 'use strict';
-var ipc = require('ipc');
+var ipcRenderer = require('electron').ipcRenderer
 var closeEl = document.querySelector('.close');
 
 closeEl.addEventListener('click', function () {
-    ipc.send('close-app');
+    ipcRenderer.send('close-app');
 });

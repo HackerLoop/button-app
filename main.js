@@ -1,6 +1,6 @@
 'use strict';
-var ipc = require('ipc');
-var globalShortcut = require('global-shortcut')
+var ipcMain = require('electron').ipcMain
+var globalShortcut = require('global-shortcut');
 var request = require('request');
 var menubar = require('menubar');
 
@@ -33,6 +33,6 @@ function setGlobalShortcuts() {
 }
 
 
-ipc.on('close-app', function(event, arg) {
+ipcMain.on('close-app', function(event, arg) {
   mb.app.quit();
 });
