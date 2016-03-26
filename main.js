@@ -3,8 +3,13 @@
 var globalShortcut = require('global-shortcut')
 var request = require('request');
 var ipc = require('ipc');
-var menubar = require('menubar')
-var mb = menubar()
+var menubar = require('menubar');
+
+var mb = menubar({
+  dir: __dirname,
+  index: 'file://' + __dirname + '/app/index.html',
+  icon: 'app/img/IconTemplate.png'
+});
 
 
 mb.on('ready', function ready () {
