@@ -14,6 +14,7 @@ function setGlobalShortcuts() {
     globalShortcut.register('ctrl+alt+shift+b', function () {
       request.post(
         'https://zapier.com/hooks/catch/4505/2xk24t/',
+        {form:{event:'button_pressed'}},
         function (error, response, body) {
             if (!error && response.statusCode == 200) {
                 console.log(body)
