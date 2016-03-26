@@ -11,7 +11,7 @@ mb.on('ready', function ready () {
 
 function setGlobalShortcuts() {
     globalShortcut.unregisterAll();
-    globalShortcut.register('ctrl+alt+shift+b', function () {
+    globalShortcut.register('ctrl+alt+shift+y', function () {
       request.post(
         'https://maker.ifttt.com/trigger/button_pressed/with/key/mdWQxkYhM1-LuraKiqDmaXb_euu5AWqNKsPh63bTy0o',
         {form:{event:'button_pressed'}},
