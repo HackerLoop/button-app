@@ -5,6 +5,7 @@
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/photon.min.css">
+    <link rel="stylesheet" href="css/grid.min.css">
     <link rel="stylesheet" href="css/button.css">
 
 
@@ -21,24 +22,25 @@
 
       <!-- Your app's content goes inside .window-content -->
       <div class="window-content">
-        <div class="pane-group">
-          <div class="pane">
-            <ul class="list-group">
-              <li class="list-group-item">
-                <!-- <img class="img-circle media-object pull-left" src="/assets/img/avatar.jpg" width="32" height="32">-->
-                <div class="media-body">
-                  <strong>List item title</strong>
-                  <p>Lorem ipsum dolor sit amet.</p>
+        <div class="container">
+          <div class="row">
+            <a href="#" class="push_button">
+              <h2>
+              </h2>
+            </a>
+          </div>
+
+          <div class="row">
+            <form>
+              <div class="form-group">
+                <input type="url" class="form-control" placeholder="Webhook url"></input>
+                <div class="form-group">
+                  <button class="btn btn-large btn-default pull-right">
+                    Save
+                  </button>
                 </div>
-              </li>
-              <li class="list-group-item">
-                <!--<img class="img-circle media-object pull-left" src="/assets/img/avatar2.png" width="32" height="32">-->
-                <div class="media-body">
-                  <strong>List item title</strong>
-                  <p>Lorem ipsum dolor sit amet.</p>
-                </div>
-              </li>
-            </ul>
+              </div>
+            </form>
           </div>
         </div>
       </div>
