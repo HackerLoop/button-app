@@ -48,6 +48,14 @@ ipcMain.on('button-pressed', function(event, arg){
   pressButton();
 });
 
+ipcMain.on('save-url', function(event, arg){
+  showLog();
+});
+function showLog() {
+  console.log('save button')
+}
+
+
 ipcMain.on('close-app', function(event, arg) {
   mb.app.quit();
 });
