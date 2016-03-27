@@ -19,19 +19,23 @@ mb.on('ready', function ready () {
 function setGlobalShortcuts() {
     globalShortcut.unregisterAll();
     globalShortcut.register('ctrl+alt+shift+y', function () {
-      request.post(
-        'https://maker.ifttt.com/trigger/button_pressed/with/key/mdWQxkYhM1-LuraKiqDmaXb_euu5AWqNKsPh63bTy0o',
-        {form:{event:'button_pressed'}},
-        function (error, response, body) {
-            if (!error && response.statusCode == 200) {
-                console.log(body)
-            }
-        }
-      );
+        pressButton()
         console.log('button is pressed')
     });
 }
 
+function pressButton() {
+  request.post(
+    'https://maker.ifttt.com/trigger/button_pressed/with/key/mdWQxkYhM1-LuraKiqDmaXb_euu5AWqNKsPh63bTy0o',
+    {form:{event:'button_pressed'}},
+    function (error, response, body) {
+        if (!error && response.statusCode == 200) {
+            console.log(body)
+        }
+    }
+  );
+
+}
 
 ipcMain.on('close-app', function(event, arg) {
   mb.app.quit();
