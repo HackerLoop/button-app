@@ -44,6 +44,10 @@ function pressButton() {
 
 }
 
+ipcMain.on('button-pressed', function(event, arg){
+  pressButton();
+});
+
 ipcMain.on('close-app', function(event, arg) {
   mb.app.quit();
 });
