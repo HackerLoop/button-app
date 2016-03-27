@@ -4,6 +4,7 @@
   "description": "The button.pm desktop app",
   "dependencies": {
     "menubar": "*",
+    "nconf": "^0.8.4",
     "request": "*"
   },
   "devDependencies": {
